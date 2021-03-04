@@ -4,6 +4,11 @@ import 'package:flutter_101/flutterBasic/centerPage.dart';
 import 'package:flutter_101/flutterBasic/columnPage.dart';
 import 'package:flutter_101/flutterBasic/containerPage.dart';
 import 'package:flutter_101/flutterBasic/expandedPage.dart';
+import 'package:flutter_101/flutterBasic/futurePage.dart';
+import 'package:flutter_101/flutterBasic/iconPage.dart';
+import 'package:flutter_101/flutterBasic/imagePage.dart';
+import 'package:flutter_101/flutterBasic/listviewPage.dart';
+import 'package:flutter_101/flutterBasic/raisedButtonPage.dart';
 import 'package:flutter_101/flutterBasic/rowPage.dart';
 import 'package:flutter_101/flutterBasic/defaultPage.dart';
 import 'package:flutter_101/flutterBasic/stackPage.dart';
@@ -21,16 +26,18 @@ class _FlutterMenuState extends State<FlutterMenu> {
 
 
   var demoMenu = [
-    'Center Widget',
-    'Column Widget',
-    'Row Widget',
-    'Expanded Widget',
-    'Stack Widget',
-    'Container Widget',
-    'Text กําหนดขนาดและสีข้อความ',
-    'ปุ่มและไอคอน',
-    'Listview Widget',
-    'Future',
+    '1. Center Widget',
+    '2. Column Widget',
+    '3. Row Widget',
+    '4. Expanded Widget',
+    '5. Stack Widget',
+    '6. Container Widget',
+    '7. Text Widget',
+    '8. RaisedButton Widget',
+    '9. Icon Widget',
+    '10. Image Widget',
+    '11. Listview Widget',
+    '12. Future',
   ];
 
   @override
@@ -97,7 +104,32 @@ class _FlutterMenuState extends State<FlutterMenu> {
             builder: (context) => TextPage(title: demoMenu[index])
         ),
         );
-      } else{
+      } else if (index == 7) {
+        Navigator.push(context, MaterialPageRoute(
+            builder: (context) => RaisedButtonPage(title: demoMenu[index])
+        ),
+        );
+      } else if (index == 8) {
+        Navigator.push(context, MaterialPageRoute(
+            builder: (context) => IconPage(title: demoMenu[index])
+        ),
+        );
+      }else if (index == 9) {
+        Navigator.push(context, MaterialPageRoute(
+            builder: (context) => ImagePage(title: demoMenu[index])
+        ),
+        );
+      }else if (index == 10) {
+        Navigator.push(context, MaterialPageRoute(
+            builder: (context) => ListviewPage(title: demoMenu[index])
+        ),
+        );
+      }else if (index == 11) {
+        Navigator.push(context, MaterialPageRoute(
+            builder: (context) => FuturePage(title: demoMenu[index])
+        ),
+        );
+      }else{
         Navigator.push(context, MaterialPageRoute(
             builder: (context) => DefaultPage(title: demoMenu[index],)
         ),

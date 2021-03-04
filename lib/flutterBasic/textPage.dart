@@ -24,23 +24,65 @@ class _TextPageState extends State<TextPage> {
       body: new Container(
           padding: new EdgeInsets.all(16.0),
           child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
               Text(
-                '1',
-                style: TextStyle(fontSize: 200),
-              ),
-              Text(
-                '2',
-                style: TextStyle(fontSize: 150, color: Colors.yellow, fontWeight: FontWeight.bold),
-              ),
-              Text(
-                '3',
-                style: TextStyle(fontSize: 100, color: Colors.green ),
-              ),
-              Text(
-                '4',
+                'Text 1',
                 style: TextStyle(fontSize: 50, color: Colors.red),
               ),
+              Text(
+                'Text 2',
+                style: TextStyle(
+                    fontSize: 50,
+                    color: Colors.green,
+                    fontWeight: FontWeight.w300),
+              ),
+              Text(
+                'Text 3',
+                style: TextStyle(
+                    fontSize: 50,
+                    color: Colors.blue,
+                    fontWeight: FontWeight.bold,
+                    backgroundColor: Colors.black ),
+              ),
+              Text(
+                'Text 4 ข้อความมีความยาวมากๆ ก็จะทำการตัดบรรทัดให้อัตโนมัติ ตามความกว้างหรือขนาดของหน้าจอ',
+                // overflow: TextOverflow.ellipsis,
+                style: TextStyle(
+                    fontSize: 22,
+                    color: Colors.red,),
+              ),
+              Text(
+                'Text 5 ตัดคำเมื่อยาวเกินขอบเขตของความกว้างหน้าจอ โดยไม่ต้องขึ้นบรรทัดใหม่',
+                overflow: TextOverflow.ellipsis,
+                style: TextStyle(
+                  fontSize: 22,
+                  color: Colors.green,),
+              ),
+              Text.rich(
+                TextSpan(
+                  children: <TextSpan> [
+                    TextSpan(
+                        text: 'Text 6 ',
+                        style: TextStyle(
+                          fontSize: 22,
+                          color: Colors.red,)
+                    ),
+                    TextSpan(
+                      text: 'message1 ',
+                      style: TextStyle(
+                        fontSize: 22,
+                        color: Colors.green,)
+                    ),
+                    TextSpan(
+                        text: 'message2',
+                        style: TextStyle(
+                          fontSize: 22,
+                          color: Colors.blue,)
+                    ),
+                  ],
+                ),
+              )
             ],
           ),
       ),

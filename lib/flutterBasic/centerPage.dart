@@ -22,13 +22,13 @@ class _CenterPageState extends State<CenterPage> {
         title: Text(widget.title),
       ),
       body: new Container(
+          color: Colors.black,
           padding: new EdgeInsets.all(16.0),
           child: Center(
-            child: Container(
-              color: Colors.black,
-              child: Text('CenterPage', style: TextStyle(fontSize: 30,color: Colors.yellow), textAlign: TextAlign.start),
-            ),
-
+              child: Text(
+                  'Page: ${widget.title}',
+                  style: TextStyle(fontSize: 30,color: Colors.yellow)
+              ),
           ),
       ),
     );
