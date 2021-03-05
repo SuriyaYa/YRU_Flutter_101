@@ -21,34 +21,16 @@ class _IconPageState extends State<IconPage> {
       appBar: AppBar(
         title: Text(widget.title),
       ),
-      body: new Container(
-          padding: new EdgeInsets.all(16.0),
-          child: ListView(
-              // padding: EdgeInsets.only(left: 10.0, right: 10.0, top: 10.0),
-              children: <Widget>[
-                Card(
-                  child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.stretch,
-                      children: <Widget> [
-                            new Container(
-                                padding: new EdgeInsets.all(10.0),
-                                child: new Column(
-                                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                    crossAxisAlignment: CrossAxisAlignment.center,
-                                    children: <Widget> [
-                                      Text('IconPage', style: TextStyle(fontSize: 22), textAlign: TextAlign.start),
-                                      SizedBox(height: 10),
-                                    ]
-                                )
-                            ),
-                      ]
-                  ),
-                ),
-          ],
+      body: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: <Widget> [
+                  Icon(Icons.audiotrack,color: Colors.red,size: 50.0),
+                  Icon(Icons.login,color: Colors.green,size: 50.0),
+                  Icon(Icons.mail,color: Colors.blue,size: 50.0),
+              ]
           ),
-      ),
-    );
-  }
+      );
+    }
 
 
 }

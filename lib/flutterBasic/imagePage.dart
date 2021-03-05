@@ -21,31 +21,21 @@ class _ImagePageState extends State<ImagePage> {
       appBar: AppBar(
         title: Text(widget.title),
       ),
-      body: new Container(
-          padding: new EdgeInsets.all(16.0),
-          child: ListView(
-              // padding: EdgeInsets.only(left: 10.0, right: 10.0, top: 10.0),
-              children: <Widget>[
-                Card(
-                  child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.stretch,
-                      children: <Widget> [
-                            new Container(
-                                padding: new EdgeInsets.all(10.0),
-                                child: new Column(
-                                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                    crossAxisAlignment: CrossAxisAlignment.center,
-                                    children: <Widget> [
-                                      Text('ImagePage', style: TextStyle(fontSize: 22), textAlign: TextAlign.start),
-                                      SizedBox(height: 10),
-                                    ]
-                                )
-                            ),
-                      ]
-                  ),
-                ),
-          ],
-          ),
+      body: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: <Widget> [
+            Text('ภาพจาก assets ',style: new TextStyle(fontSize: 22.0,fontWeight: FontWeight.bold,color: Colors.red),),
+            Container(
+              height: 200.0,
+              color: Colors.grey,
+              child: Image.asset('assets/images/logo/splash_yru_logo.png',height: 180.0,) ,
+            ),
+            Text('ภาพจาก url link',style: new TextStyle(fontSize: 22.0,fontWeight: FontWeight.bold,color: Colors.red),),
+            Container(
+              width: 300.0,
+              child: Image.network('https://yru.ac.th/intro/AtInnYRU_W825.png'),
+            ),
+          ]
       ),
     );
   }

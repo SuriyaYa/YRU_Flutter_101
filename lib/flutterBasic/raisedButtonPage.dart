@@ -25,7 +25,7 @@ class _RaisedButtonPageState extends State<RaisedButtonPage> {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
               Text(
-                'Raised Buttons แบบต่าง ๆ',
+                'RaisedButtons แบบต่าง ๆ',
                 style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
               ),
               RaisedButton(child: Text('Disabled Button')),
@@ -57,7 +57,7 @@ class _RaisedButtonPageState extends State<RaisedButtonPage> {
                 onPressed: () {},
               ),
               RaisedButton(
-                child: Text('Elevation increased'),
+                child: Text('Elevation increased -เงาใต้ปุ๋ม'),
                 elevation: 5,
                 onPressed: () {},
               ),
