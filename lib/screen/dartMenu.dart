@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
-import 'defaultPage.dart';
-import 'printComment.dart';
+import 'dartBasic/defaultPage.dart';
+import 'dartBasic/printComment.dart';
 
 class DartMenu extends StatefulWidget {
 
@@ -15,7 +15,7 @@ class DartMenu extends StatefulWidget {
 class _DartMenuState extends State<DartMenu> {
 
 
-  var demoMenu = [
+  var dartMenu = [
     'การเขียนคําอธิบาย',
     'ตัวแปรและชนิดข้อมูล',
     'รูปแบบตัวแปรในภาษา Dart',
@@ -52,14 +52,14 @@ class _DartMenuState extends State<DartMenu> {
                     child: Container(
                       color: Colors.black,
                       padding: new EdgeInsets.all(10.0),
-                      child: Text(demoMenu[index],
+                      child: Text(dartMenu[index],
                       style: new TextStyle(fontSize: 25.0,fontWeight: FontWeight.bold,color: Colors.yellow),),
                     )
                   ),
                   onTap: () => _onTileClicked(index),
                 );
               },
-              itemCount: demoMenu.length));
+              itemCount: dartMenu.length));
 
   }
 
@@ -68,17 +68,17 @@ class _DartMenuState extends State<DartMenu> {
     print("You tapped on item $index");
       if (index == 0) {
         Navigator.push(context, MaterialPageRoute(
-            builder: (context) => PrintComment(title: demoMenu[index])
+            builder: (context) => PrintComment(title: dartMenu[index])
           ),
         );
       } else if (index == 1) {
         Navigator.push(context, MaterialPageRoute(
-            builder: (context) => PrintComment(title: demoMenu[index])
+            builder: (context) => PrintComment(title: dartMenu[index])
         ),
         );
       }else{
         Navigator.push(context, MaterialPageRoute(
-            builder: (context) => DefaultPage(title: demoMenu[index],)
+            builder: (context) => DefaultPage(title: dartMenu[index],)
         ),
         );
       }

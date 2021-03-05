@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_101/screen/flutterBasic/flutterMenu.dart';
+import 'package:flutter_101/screen/flutterMenu.dart';
 
-import 'screen/dartBasic/dartMenu.dart';
+import 'screen/dartMenu.dart';
 
 void main() {
   runApp(MyApp());

@@ -32,11 +32,12 @@ class _ListViewPageState extends State<ListViewPage> {
                       children: <Widget> [
                             new Container(
                                 padding: new EdgeInsets.all(10.0),
+                                color: Colors.black,
                                 child: new Column(
                                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                     crossAxisAlignment: CrossAxisAlignment.center,
                                     children: <Widget> [
-                                      Text('ListView() Page', style: TextStyle(fontSize: 22), textAlign: TextAlign.start),
+                                      Text('ListView() Page', style: TextStyle(fontSize: 22, color: Colors.yellow), textAlign: TextAlign.start),
                                       SizedBox(height: 10),
                                     ]
                                 )
