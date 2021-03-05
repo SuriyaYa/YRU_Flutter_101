@@ -26,13 +26,17 @@ class _ImagePageState extends State<ImagePage> {
           children: <Widget> [
             Text('ภาพจาก assets ',style: new TextStyle(fontSize: 22.0,fontWeight: FontWeight.bold,color: Colors.red),),
             Container(
-              height: 200.0,
+              padding: EdgeInsets.all(10),
               color: Colors.grey,
               child: Image.asset('assets/images/logo/splash_yru_logo.png',height: 180.0,) ,
             ),
+            SizedBox(
+              height: 20.0,
+            ),
             Text('ภาพจาก url link',style: new TextStyle(fontSize: 22.0,fontWeight: FontWeight.bold,color: Colors.red),),
             Container(
-              width: 300.0,
+              padding: EdgeInsets.all(10),
+              color: Colors.grey,
               child: Image.network('https://yru.ac.th/intro/AtInnYRU_W825.png'),
             ),
           ]

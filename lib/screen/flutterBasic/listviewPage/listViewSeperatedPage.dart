@@ -1,18 +1,18 @@
 import 'package:flutter/material.dart';
 
-class ListviewPage extends StatefulWidget {
+class ListViewSeparatedPage extends StatefulWidget {
 
   final String title;
 
-  const ListviewPage({Key key, this.title}) : super(key: key);
+  const ListViewSeparatedPage({Key key, this.title}) : super(key: key);
 
   @override
   State<StatefulWidget> createState() {
-    return _ListviewPageState();
+    return _ListViewSeparatedPageState();
   }
 }
 
-class _ListviewPageState extends State<ListviewPage> {
+class _ListViewSeparatedPageState extends State<ListViewSeparatedPage> {
 
   @override
   Widget build(BuildContext context) {
@@ -36,7 +36,7 @@ class _ListviewPageState extends State<ListviewPage> {
                                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                     crossAxisAlignment: CrossAxisAlignment.center,
                                     children: <Widget> [
-                                      Text('ListviewPage', style: TextStyle(fontSize: 22), textAlign: TextAlign.start),
+                                      Text('ListView.builder() Page', style: TextStyle(fontSize: 22), textAlign: TextAlign.start),
                                       SizedBox(height: 10),
                                     ]
                                 )
@@ -49,7 +49,5 @@ class _ListviewPageState extends State<ListviewPage> {
       ),
     );
   }
-
-
 }
 

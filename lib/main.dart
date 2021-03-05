@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_101/flutterBasic/flutterMenu.dart';
+import 'package:flutter_101/screen/flutterBasic/flutterMenu.dart';
 
-import 'dartBasic/dartMenu.dart';
+import 'screen/dartBasic/dartMenu.dart';
 
 void main() {
   runApp(MyApp());
@@ -60,7 +60,6 @@ class _MyHomePageState extends State<MyHomePage> {
                               crossAxisAlignment: CrossAxisAlignment.center,
                               children: <Widget> [
                                 Text('Dart Basic', style: TextStyle(fontSize: 22,color: Colors.yellow,fontWeight: FontWeight.bold), textAlign: TextAlign.start),
-                                SizedBox(height: 10),
                               ]
                           )
                       ),
@@ -75,7 +74,7 @@ class _MyHomePageState extends State<MyHomePage> {
               },
             ),
             SizedBox(
-              height: 20.0,
+              height: 10.0,
             ),
             ListTile(
               title: Card(
@@ -90,7 +89,6 @@ class _MyHomePageState extends State<MyHomePage> {
                               crossAxisAlignment: CrossAxisAlignment.center,
                               children: <Widget> [
                                 Text('Flutter Basic', style: TextStyle(fontSize: 22,color: Colors.yellow,fontWeight: FontWeight.bold), textAlign: TextAlign.start),
-                                SizedBox(height: 10),
                               ]
                           )
                       ),

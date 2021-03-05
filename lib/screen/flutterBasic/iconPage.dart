@@ -24,9 +24,18 @@ class _IconPageState extends State<IconPage> {
       body: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: <Widget> [
-                  Icon(Icons.audiotrack,color: Colors.red,size: 50.0),
+                Icon(Icons.audiotrack,color: Colors.red,size: 50.0),
+                SizedBox(
+                  height: 20.0,
+                ),
                   Icon(Icons.login,color: Colors.green,size: 50.0),
-                  Icon(Icons.mail,color: Colors.blue,size: 50.0),
+                SizedBox(
+                  height: 20.0,
+                ),
+                Icon(Icons.mail,color: Colors.blue,size: 50.0),
+                SizedBox(
+                  height: 20.0,
+                ),
               ]
           ),
       );

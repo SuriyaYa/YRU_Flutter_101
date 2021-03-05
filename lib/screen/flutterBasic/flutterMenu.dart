@@ -1,18 +1,19 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
-import 'package:flutter_101/flutterBasic/centerPage.dart';
-import 'package:flutter_101/flutterBasic/columnPage.dart';
-import 'package:flutter_101/flutterBasic/containerPage.dart';
-import 'package:flutter_101/flutterBasic/expandedPage.dart';
-import 'package:flutter_101/flutterBasic/futurePage.dart';
-import 'package:flutter_101/flutterBasic/iconPage.dart';
-import 'package:flutter_101/flutterBasic/imagePage.dart';
-import 'package:flutter_101/flutterBasic/listviewPage.dart';
-import 'package:flutter_101/flutterBasic/raisedButtonPage.dart';
-import 'package:flutter_101/flutterBasic/rowPage.dart';
-import 'package:flutter_101/flutterBasic/defaultPage.dart';
-import 'package:flutter_101/flutterBasic/stackPage.dart';
-import 'package:flutter_101/flutterBasic/textPage.dart';
+import 'package:flutter_101/screen/flutterBasic/centerPage.dart';
+import 'package:flutter_101/screen/flutterBasic/columnPage.dart';
+import 'package:flutter_101/screen/flutterBasic/containerPage.dart';
+import 'package:flutter_101/screen/flutterBasic/expandedPage.dart';
+import 'package:flutter_101/screen/flutterBasic/futurePage.dart';
+import 'package:flutter_101/screen/flutterBasic/iconPage.dart';
+import 'package:flutter_101/screen/flutterBasic/imagePage.dart';
+import 'package:flutter_101/screen/flutterBasic/listviewPage.dart';
+import 'package:flutter_101/screen/flutterBasic/raisedButtonPage.dart';
+import 'package:flutter_101/screen/flutterBasic/rowPage.dart';
+import 'package:flutter_101/screen/flutterBasic/defaultPage.dart';
+import 'package:flutter_101/screen/flutterBasic/scaffoldPage.dart';
+import 'package:flutter_101/screen/flutterBasic/stackPage.dart';
+import 'package:flutter_101/screen/flutterBasic/textPage.dart';
 
 class FlutterMenu extends StatefulWidget {
 
@@ -38,6 +39,8 @@ class _FlutterMenuState extends State<FlutterMenu> {
     '10. Image Widget',
     '11. Listview Widget',
     '12. Future',
+    // '13. Scaffold Widget',
+
   ];
 
   @override
@@ -62,7 +65,8 @@ class _FlutterMenuState extends State<FlutterMenu> {
                   onTap: () => _onTileClicked(index),
                 );
               },
-              itemCount: demoMenu.length));
+              itemCount: demoMenu.length)
+      );
 
   }
 
@@ -127,6 +131,11 @@ class _FlutterMenuState extends State<FlutterMenu> {
       }else if (index == 11) {
         Navigator.push(context, MaterialPageRoute(
             builder: (context) => FuturePage(title: demoMenu[index])
+        ),
+        );
+      }else if (index == 12) {
+        Navigator.push(context, MaterialPageRoute(
+            builder: (context) => ScaffoldPage(title: demoMenu[index])
         ),
         );
       }else{
