@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_101/screen/flutterAdvanceMenu.dart';
 import 'package:flutter_101/screen/flutterMenu.dart';
 
 import 'screen/dartMenu.dart';
@@ -18,6 +19,7 @@ class MyApp extends StatelessWidget {
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
       home: MyHomePage(title: 'YRU Flutter Demo 101 '),
+      // debugShowCheckedModeBanner: false, //Disable banner "DEBUG"
     );
   }
 }
@@ -98,6 +100,34 @@ class _MyHomePageState extends State<MyHomePage> {
               onTap: () {
                 Navigator.push(context, MaterialPageRoute(
                     builder: (context) => FlutterMenu()
+                ),
+                );
+              },
+            ), SizedBox(
+              height: 10.0,
+            ),
+            ListTile(
+              title: Card(
+                color: Colors.black,
+                child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: <Widget> [
+                      new Container(
+                          padding: new EdgeInsets.all(10.0),
+                          child: new Column(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              crossAxisAlignment: CrossAxisAlignment.center,
+                              children: <Widget> [
+                                Text('Flutter Advance', style: TextStyle(fontSize: 22,color: Colors.yellow,fontWeight: FontWeight.bold), textAlign: TextAlign.start),
+                              ]
+                          )
+                      ),
+                    ]
+                ),
+              ),
+              onTap: () {
+                Navigator.push(context, MaterialPageRoute(
+                    builder: (context) => FlutterAdvanceMenu()
                 ),
                 );
               },

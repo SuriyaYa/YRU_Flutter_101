@@ -1,18 +1,18 @@
 import 'package:flutter/material.dart';
 
-class RaisedButtonPage extends StatefulWidget {
+class ElevatedButtonPage extends StatefulWidget {
 
   final String title;
 
-  const RaisedButtonPage({Key key, this.title}) : super(key: key);
+  const ElevatedButtonPage({Key key, this.title}) : super(key: key);
 
   @override
   State<StatefulWidget> createState() {
-    return _RaisedButtonPageState();
+    return _ElevatedButtonPageState();
   }
 }
 
-class _RaisedButtonPageState extends State<RaisedButtonPage> {
+class _ElevatedButtonPageState extends State<ElevatedButtonPage> {
 
   @override
   Widget build(BuildContext context) {
@@ -25,56 +25,65 @@ class _RaisedButtonPageState extends State<RaisedButtonPage> {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
               Text(
-                'RaisedButtons แบบต่าง ๆ',
+                'ElevatedButtons แบบต่าง ๆ',
                 style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
               ),
-              RaisedButton(child: Text('Disabled Button')),
-              RaisedButton(
+              ElevatedButton(child: Text('Disabled Button')),
+              ElevatedButton(
                 child: Text('Default Enabled'),
-                onPressed: () {},
+                onPressed: () {
+                  print('');
+                },
               ),
-              RaisedButton(
-                child: Text('Text Color Changed'),
-                textColor: Colors.red,
-                onPressed: () {},
-              ),
-              RaisedButton(
-                child: Text('Color Changed'),
-                color: Colors.green,
-                onPressed: () {},
-              ),
-              RaisedButton(
-                child: Text('Button with Padding'),
-                padding: EdgeInsets.all(20),
-                onPressed: () {},
-              ),
-              RaisedButton(
-                child: Text('More Rounded Corners'),
-                color: Colors.purpleAccent,
-                shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.all(Radius.circular(16.0))
+              ElevatedButton(
+                style: ElevatedButton.styleFrom(
+                  primary: Colors.red, // background
                 ),
+                child: Text('Text Color Changed'),
+                // textColor: Colors.red,
                 onPressed: () {},
               ),
-              RaisedButton(
+              ElevatedButton(
+                style: ElevatedButton.styleFrom(
+                  primary: Colors.green, // background
+                ),
+                child: Text('Color Changed'),
+                onPressed: () {},
+              ),
+              ElevatedButton(
+                child: Text('Button with Padding'),
+                // padding: EdgeInsets.all(20),
+                onPressed: () {},
+              ),
+              ElevatedButton(
+                style: ElevatedButton.styleFrom(
+                  primary: Colors.purpleAccent, // background
+                ),
+                child: Text('More Rounded Corners'),
+                // shape: RoundedRectangleBorder(
+                //     borderRadius: BorderRadius.all(Radius.circular(16.0))
+                // ),
+                onPressed: () {},
+              ),
+              ElevatedButton(
                 child: Text('Elevation increased -เงาใต้ปุ๋ม'),
-                elevation: 5,
+                // elevation: 5,
                 onPressed: () {},
               ),
-              RaisedButton(
+              ElevatedButton(
                 child: Text('Splash Color as red'),
-                splashColor: Colors.red,
+                // splashColor: Colors.red,
                 onPressed: () {},
               ),
-              RaisedButton(
+              ElevatedButton(
                 child: Text('Zero Elevation'),
-                elevation: 0,
+                // elevation: 0,
                 onPressed: () {},
               ),
-              RaisedButton(
+              ElevatedButton(
                 onPressed: () {},
-                textColor: Colors.white,
-                padding: const EdgeInsets.all(0.0),
+                // textColor: Colors.white,
+                // padding: const EdgeInsets.all(0.0),
                 child: Container(
                   decoration: const BoxDecoration(
                     gradient: LinearGradient(

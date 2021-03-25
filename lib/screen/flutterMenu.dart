@@ -4,15 +4,11 @@ import 'package:flutter_101/screen/flutterBasic/centerPage.dart';
 import 'package:flutter_101/screen/flutterBasic/columnPage.dart';
 import 'package:flutter_101/screen/flutterBasic/containerPage.dart';
 import 'package:flutter_101/screen/flutterBasic/expandedPage.dart';
-import 'package:flutter_101/screen/flutterBasic/futurePage.dart';
 import 'package:flutter_101/screen/flutterBasic/iconPage.dart';
 import 'package:flutter_101/screen/flutterBasic/imagePage.dart';
-import 'package:flutter_101/screen/flutterBasic/listViewMenu.dart';
-import 'package:flutter_101/screen/flutterBasic/listviewPage/listViewPage.dart';
-import 'package:flutter_101/screen/flutterBasic/raisedButtonPage.dart';
+import 'package:flutter_101/screen/flutterBasic/buttonPage.dart';
 import 'package:flutter_101/screen/flutterBasic/rowPage.dart';
 import 'package:flutter_101/screen/flutterBasic/defaultPage.dart';
-import 'package:flutter_101/screen/flutterBasic/scaffoldPage.dart';
 import 'package:flutter_101/screen/flutterBasic/stackPage.dart';
 import 'package:flutter_101/screen/flutterBasic/textPage.dart';
 
@@ -35,12 +31,9 @@ class _FlutterMenuState extends State<FlutterMenu> {
     '5. Stack Widget',
     '6. Container Widget',
     '7. Text Widget',
-    '8. RaisedButton Widget',
+    '8. Button Widget',
     '9. Icon Widget',
     '10. Image Widget',
-    '11. Listview Widget',
-    '12. Future',
-    // '13. Scaffold Widget',
 
   ];
 
@@ -111,7 +104,7 @@ class _FlutterMenuState extends State<FlutterMenu> {
         );
       } else if (index == 7) {
         Navigator.push(context, MaterialPageRoute(
-            builder: (context) => RaisedButtonPage(title: widgetMenu[index])
+            builder: (context) => ButtonPage(title: widgetMenu[index])
         ),
         );
       } else if (index == 8) {
@@ -122,21 +115,6 @@ class _FlutterMenuState extends State<FlutterMenu> {
       }else if (index == 9) {
         Navigator.push(context, MaterialPageRoute(
             builder: (context) => ImagePage(title: widgetMenu[index])
-        ),
-        );
-      }else if (index == 10) {
-        Navigator.push(context, MaterialPageRoute(
-            builder: (context) => ListViewMenu(title: widgetMenu[index])
-        ),
-        );
-      }else if (index == 11) {
-        Navigator.push(context, MaterialPageRoute(
-            builder: (context) => FuturePage(title: widgetMenu[index])
-        ),
-        );
-      }else if (index == 12) {
-        Navigator.push(context, MaterialPageRoute(
-            builder: (context) => ScaffoldPage(title: widgetMenu[index])
         ),
         );
       }else{
