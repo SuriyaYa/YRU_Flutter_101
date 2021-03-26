@@ -30,7 +30,7 @@ class _ListViewPageState extends State<ListViewLisTile> {
                   title: Text('List Star'),
                   leading: Icon(Icons.star),
                   onTap: (){
-                    print('Touch List 1');
+                    print('Touch List 0');
                   },
                 ),
                 ListTile(
@@ -44,7 +44,7 @@ class _ListViewPageState extends State<ListViewLisTile> {
                   title: Text('List Phone'),
                   leading: Icon(Icons.phone),
                   onTap: (){
-                    print('Touch List 1');
+                    print('Touch List 2');
                   },
                 ),
                 ListTile(
@@ -53,7 +53,7 @@ class _ListViewPageState extends State<ListViewLisTile> {
                   leading: Icon(Icons.add_a_photo_rounded),
                   trailing: Icon(Icons.add_a_photo_rounded,color: Colors.red,),
                   onTap: (){
-                    print('Touch List 1');
+                    print('Touch List 3');
                   },
                 )
           ],

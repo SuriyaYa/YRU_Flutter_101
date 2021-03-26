@@ -16,6 +16,7 @@ class _ListViewBuilderPageState extends State<ListViewBuilderPage> {
 
   @override
   Widget build(BuildContext context) {
+    final items = List<String>.generate(150, (i) => "Item $i");
 
     return Scaffold(
       appBar: AppBar(
@@ -24,14 +25,19 @@ class _ListViewBuilderPageState extends State<ListViewBuilderPage> {
       body: new Container(
           padding: new EdgeInsets.all(16.0),
           child: ListView.builder(
-              itemCount: 30,
+              itemCount: items.length,
               itemBuilder: (BuildContext context,int index){
                 return ListTile(
-                    leading: Icon(Icons.list),
-                    trailing: Text("GFG",
-                      style: TextStyle(
-                          color: Colors.green,fontSize: 15),),
-                    title:Text("List item $index")
+                  leading: Icon(Icons.list),
+                  title:Text("List ${items[index].characters} / index: $index"),
+                  subtitle: Text('subtitle ${items[index].characters}'),
+                  trailing: Text("GFG",
+                    style: TextStyle(
+                        color: Colors.green,fontSize: 15),),
+
+                  onTap: (){
+                    print('Touch List $index');
+                  },
                 );
               }
           ),
