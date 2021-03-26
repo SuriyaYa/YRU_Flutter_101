@@ -25,10 +25,21 @@ class _CenterPageState extends State<CenterPage> {
           color: Colors.black,
           padding: new EdgeInsets.all(16.0),
           child: Center(
-              child: Text(
-                  'Page: ${widget.title}',
-                  style: TextStyle(fontSize: 30,color: Colors.yellow)
-              ),
+            child: Text(
+                '${widget.title}',
+                style: TextStyle(fontSize: 30,color: Colors.yellow)
+            ),
+
+            // child: Container(
+            //   width: 150.0,
+            //   height: 100.0,
+            //   color: Colors.red,
+            // ),
+
+            // child: Image.asset('assets/images/logo/splash_yru_logo.png',
+            //   height: 250.0,
+            // ),
+
           ),
       ),
     );

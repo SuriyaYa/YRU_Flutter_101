@@ -12,7 +12,7 @@ import 'package:flutter_101/screen/flutterBasic/defaultPage.dart';
 import 'package:flutter_101/screen/flutterBasic/stackPage.dart';
 import 'package:flutter_101/screen/flutterBasic/textPage.dart';
 
-class FlutterMenu extends StatefulWidget {
+class FlutterBasicMenu extends StatefulWidget {
 
   @override
   State<StatefulWidget> createState() {
@@ -20,7 +20,7 @@ class FlutterMenu extends StatefulWidget {
   }
 }
 
-class _FlutterMenuState extends State<FlutterMenu> {
+class _FlutterMenuState extends State<FlutterBasicMenu> {
 
 
   var widgetMenu = [

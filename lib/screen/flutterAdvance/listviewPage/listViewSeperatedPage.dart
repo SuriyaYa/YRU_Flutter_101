@@ -16,36 +16,38 @@ class _ListViewSeparatedPageState extends State<ListViewSeparatedPage> {
 
   @override
   Widget build(BuildContext context) {
+    final items = List<String>.generate(20, (i) => "Separated Item $i");
 
     return Scaffold(
       appBar: AppBar(
         title: Text(widget.title),
       ),
       body: new Container(
-          padding: new EdgeInsets.all(16.0),
-          child: ListView(
-              // padding: EdgeInsets.only(left: 10.0, right: 10.0, top: 10.0),
-              children: <Widget>[
-                Card(
-                  child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.stretch,
-                      children: <Widget> [
-                            new Container(
-                                padding: new EdgeInsets.all(10.0),
-                                child: new Column(
-                                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                    crossAxisAlignment: CrossAxisAlignment.center,
-                                    children: <Widget> [
-                                      Text('ListView.builder() Page', style: TextStyle(fontSize: 22), textAlign: TextAlign.start),
-                                      SizedBox(height: 10),
-                                    ]
-                                )
-                            ),
-                      ]
-                  ),
-                ),
-          ],
-          ),
+        padding: new EdgeInsets.all(16.0),
+        child: ListView.separated(
+            itemCount: items.length,
+            itemBuilder: (BuildContext context,int index){
+              return ListTile(
+                leading: Icon(Icons.star),
+                title:Text("List ${items[index].characters} / index: $index"),
+                subtitle: Text('subtitle ${items[index].characters}'),
+                trailing: Text("GFG",
+                  style: TextStyle(
+                      color: Colors.green,fontSize: 15),),
+
+                onTap: (){
+                  print('Touch List $index');
+                },
+              );
+            },
+            ///1. แบบย่อฟังก์ชัน
+          // separatorBuilder: (context, index) => const Divider(),
+            ///2. แบบฟังก์ชันปกติ
+          separatorBuilder: (context, index) {
+              return const Divider();
+          }
+
+        ),
       ),
     );
   }

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:flutter_101/screen/dartBasic/variablePage.dart';
 
 import 'dartBasic/defaultPage.dart';
 import 'dartBasic/printComment.dart';
@@ -73,7 +74,7 @@ class _DartMenuState extends State<DartMenu> {
         );
       } else if (index == 1) {
         Navigator.push(context, MaterialPageRoute(
-            builder: (context) => PrintComment(title: dartMenu[index])
+            builder: (context) => VariablePage(title: dartMenu[index])
         ),
         );
       }else{

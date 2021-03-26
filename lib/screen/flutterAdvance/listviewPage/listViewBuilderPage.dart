@@ -28,7 +28,7 @@ class _ListViewBuilderPageState extends State<ListViewBuilderPage> {
               itemCount: items.length,
               itemBuilder: (BuildContext context,int index){
                 return ListTile(
-                  leading: Icon(Icons.list),
+                  leading: Icon(Icons.sentiment_neutral),
                   title:Text("List ${items[index].characters} / index: $index"),
                   subtitle: Text('subtitle ${items[index].characters}'),
                   trailing: Text("GFG",

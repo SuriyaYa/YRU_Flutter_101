@@ -16,7 +16,7 @@ class _MainPageState extends State<MainPage> {
 
     return Scaffold(
       appBar: AppBar(
-        title: Text('menu_contact'.tr),
+        // title: Text('mainpage'.tr),
       ),
       body: new Container(
         // decoration: BackgroundYRU.decorationApp(),

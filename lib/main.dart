@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_101/screen/flutterAdvanceMenu.dart';
-import 'package:flutter_101/screen/flutterMenu.dart';
+import 'package:flutter_101/screen/flutterBasicMenu.dart';
 
 import 'screen/dartMenu.dart';
 
@@ -99,7 +99,7 @@ class _MyHomePageState extends State<MyHomePage> {
               ),
               onTap: () {
                 Navigator.push(context, MaterialPageRoute(
-                    builder: (context) => FlutterMenu()
+                    builder: (context) => FlutterBasicMenu()
                 ),
                 );
               },

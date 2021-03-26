@@ -28,88 +28,79 @@ class _ButtonPageState extends State<ButtonPage> {
               'Buttons แบบต่าง ๆ',
               style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
             ),
-            RaisedButton(
-              onPressed: () => {},
-              color: Colors.blue,
-              child: Text(
-                'Raised Button',
-                style: TextStyle(color: Colors.white),
-              ),
+            SizedBox(height: 20.0,),
+            Text('1. ElevatedButton', style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),),
+            ElevatedButton(
+              child: Text('ElevatedButton'),
+              style: ButtonStyle(
+                  backgroundColor: MaterialStateProperty.all(Colors.pinkAccent),
+                  padding: MaterialStateProperty.all(EdgeInsets.all(20)),
+                  textStyle: MaterialStateProperty.all(TextStyle(fontSize: 20))),
+              onPressed: () {
+                print('Elevated Button');
+              },
             ),
-            FlatButton(
-              onPressed: () => {},
-              child: Text(
-                'Flat Button',
-              ),
-            ),
-            OutlineButton(
-              onPressed: () => {},
-              textColor: Colors.blue,
-              borderSide: BorderSide(color: Colors.blue, width: 1.0, style: BorderStyle.solid),
-              child: Text(
-                'Outline Button',
-              ),
-            ),
+            Text('2. ButtonBar', style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),),
             ButtonBar(
               alignment: MainAxisAlignment.center,
               children: <Widget>[
-                RaisedButton(
-                  onPressed: () => {},
-                  color: Colors.green,
-                  child: Text('Accept', style: TextStyle(color: Colors.white),),
+                ElevatedButton(
+                  child: Text('Accept'),
+                  style: ButtonStyle(
+                      backgroundColor: MaterialStateProperty.all(Colors.green),
+                      padding: MaterialStateProperty.all(EdgeInsets.all(20)),
+                      textStyle: MaterialStateProperty.all(TextStyle(fontSize: 20))),
+                  onPressed: () {
+                    print('Accept');
+                  },
                 ),
-                RaisedButton(
-                  onPressed: () => {},
-                  color: Colors.red,
-                  child: Text('Cancel', style: TextStyle(color: Colors.white),),
+                ElevatedButton(
+                  child: Text('Cancel'),
+                  style: ButtonStyle(
+                      backgroundColor: MaterialStateProperty.all(Colors.red),
+                      padding: MaterialStateProperty.all(EdgeInsets.all(20)),
+                      textStyle: MaterialStateProperty.all(TextStyle(fontSize: 20))),
+                  onPressed: () {
+                    print('Cancel');
+                  },
                 ),
               ],
             ),
+            Text('3. RawMaterialButton', style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),),
             RawMaterialButton(
-              onPressed: ()=>{},
               fillColor: Colors.blue,
               child: Text('Raw Material Button', style: TextStyle(color: Colors.white),),
+              onPressed: () {
+                print('RawMaterialButton');
+              },
             ),
-            ElevatedButton(
-                onPressed: () {},
-                child: Text('ElevatedButton')),
+            Text('4. ElevatedButton + icon', style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),),
             ElevatedButton.icon(
-              onPressed: () {},
               label: Text('ElevatedButton icon'),
               icon: Icon(Icons.search),
+              onPressed: () {
+                print('ElevatedButton icon');
+              },
             ),
-            ElevatedButton(
-              child: Text('ElevatedButton'),
-              onPressed: () {},
-              style: ElevatedButton.styleFrom(
-                  primary: Colors.purple,
-                  padding: EdgeInsets.symmetric(horizontal: 40, vertical: 10),
-                  textStyle: TextStyle(
-                      fontSize: 30,
-                      fontWeight: FontWeight.bold)),
-            ),
-            ElevatedButton(
-              child: Text('Button'),
-              onPressed: () {},
-              style: ButtonStyle(
-                  backgroundColor: MaterialStateProperty.all(Colors.red),
-                  padding: MaterialStateProperty.all(EdgeInsets.all(20)),
-                  textStyle: MaterialStateProperty.all(TextStyle(fontSize: 20))),
-            ),
+            Text('5. ElevatedBConstrainedBox', style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),),
             ConstrainedBox(
-              constraints: BoxConstraints.tightFor(width: 100, height: 80),
+              constraints: BoxConstraints.tightFor(width: 200, height: 100),
               child: ElevatedButton(
-                child: Text('300 x 200'),
-                onPressed: () {},
+                child: Text('200 x 100'),
+                onPressed: () {
+                  print('ConstrainedBox');
+                },
               ),
             ),
           ]
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
       floatingActionButton: FloatingActionButton(
-        onPressed: ()=>{},
         child: Icon(Icons.add_a_photo),
         backgroundColor: Colors.blue,
+        onPressed: () {
+          print('FloatingActionButton');
+        },
       ),
     );
   }

@@ -17,6 +17,11 @@ class _PrintCommentState extends State<PrintComment> {
   @override
   Widget build(BuildContext context) {
 
+
+
+
+
+
     return Scaffold(
       appBar: AppBar(
         title: Text(widget.title),
@@ -34,9 +39,18 @@ class _PrintCommentState extends State<PrintComment> {
                                 padding: new EdgeInsets.all(10.0),
                                 child: new Column(
                                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                    crossAxisAlignment: CrossAxisAlignment.center,
+                                    crossAxisAlignment: CrossAxisAlignment.start,
                                     children: <Widget> [
-                                      Text('PrintComment_app_1', style: TextStyle(fontSize: 22), textAlign: TextAlign.start),
+                                      //แบบบรรทัดเดียว
+                                      Text('1. คอมเมนท์บรรทัดเดียว\n //แบบบรรทัดเดียว', style: TextStyle(fontSize: 22), textAlign: TextAlign.start),
+                                      SizedBox(height: 10),
+
+                                      /*
+                                      แบบหลายบรรทัด 1
+                                      แบบหลายบรรทัด 2
+                                      แบบหลายบรรทัด 3
+                                      */
+                                      Text('2. คอมเมนท์แบบหลายบรรทัด\n/* \n แบบหลายบรรทัด 1\n แบบหลายบรรทัด 2\n แบบหลายบรรทัด 3 \n*/', style: TextStyle(fontSize: 22), textAlign: TextAlign.start),
                                       SizedBox(height: 10),
                                     ]
                                 )
