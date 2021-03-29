@@ -21,28 +21,112 @@ class _RowPageState extends State<RowPage> {
       appBar: AppBar(
         title: Text(widget.title),
       ),
-      body: Row(
-        crossAxisAlignment: CrossAxisAlignment.start,
+      body: Center(
+      child: Column(
         children: [
-          Container(
-            color: Colors.red,
-            width: 100.0,
-            height: 100.0,
-          ),
-          Container(
-            color: Colors.green,
-            width: 100.0,
-            height: 100.0,
-          ),
-          Container(
-            color: Colors.blue,
-            width: 100.0,
-            height: 100.0,
+          Row(
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              Container(
+                color: Colors.red,
+                width: 40.0,
+                height: 300.0,
+              ),
+              Container(
+                color: Colors.green,
+                width: 40.0,
+                height: 300.0,
+              ),
+              Container(
+                color: Colors.blue,
+                width: 40.0,
+                height: 300.0,
+              ),
+              Container(
+                color: Colors.orange,
+                width: 40.0,
+                height: 300.0,
+              ),
+              Container(
+                color: Colors.green,
+                width: 40.0,
+                height: 300.0,
+              ),
+              Container(
+                color: Colors.blue,
+                width: 40.0,
+                height: 300.0,
+              ),
+              Container(
+                color: Colors.orange,
+                width: 40.0,
+                height: 300.0,
+              ),
+            ],
           ),
         ],
       ),
+      ),
+      // body: widgetExam(),
+
     );
   }
+
+
+
+  // @override
+  // Widget build(BuildContext context) {
+  //
+  //   return Scaffold(
+  //     appBar: AppBar(
+  //       title: Text(widget.title),
+  //     ),
+  //     body: Center(
+  //         child: Row(
+  //           crossAxisAlignment: CrossAxisAlignment.start,
+  //           children: [
+  //             Container(
+  //               color: Colors.red,
+  //               width: 30.0,
+  //               height: 200.0,
+  //             ),
+  //             Container(
+  //               color: Colors.green,
+  //               width: 30.0,
+  //               height: 200.0,
+  //             ),
+  //             Container(
+  //               color: Colors.blue,
+  //               width: 30.0,
+  //               height: 200.0,
+  //             ),
+  //             Container(
+  //               color: Colors.white,
+  //               width: 30.0,
+  //               height: 200.0,
+  //             ),
+  //             Container(
+  //               color: Colors.orange,
+  //               width: 30.0,
+  //               height: 200.0,
+  //             ),
+  //             Container(
+  //               color: Colors.pink,
+  //               width: 30.0,
+  //               height: 200.0,
+  //             ),
+  //             Container(
+  //               color: Colors.black,
+  //               width: 30.0,
+  //               height: 200.0,
+  //             ),
+  //           ],
+  //         ),
+  //     ),
+  //
+  //   );
+  // }
+
 
 
 }

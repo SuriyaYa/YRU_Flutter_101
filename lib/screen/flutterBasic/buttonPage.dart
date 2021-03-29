@@ -31,10 +31,10 @@ class _ButtonPageState extends State<ButtonPage> {
             SizedBox(height: 20.0,),
             Text('1. ElevatedButton', style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),),
             ElevatedButton(
-              child: Text('ElevatedButton'),
+              child: Text('ElevatedButton<<<', style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold,color: Colors.orange)),
               style: ButtonStyle(
-                  backgroundColor: MaterialStateProperty.all(Colors.pinkAccent),
-                  padding: MaterialStateProperty.all(EdgeInsets.all(20)),
+                  backgroundColor: MaterialStateProperty.all(Colors.green),
+                  padding: MaterialStateProperty.all(EdgeInsets.all(30.0)),
                   textStyle: MaterialStateProperty.all(TextStyle(fontSize: 20))),
               onPressed: () {
                 print('Elevated Button');
@@ -64,6 +64,16 @@ class _ButtonPageState extends State<ButtonPage> {
                     print('Cancel');
                   },
                 ),
+                ElevatedButton(
+                  child: Text('OK'),
+                  style: ButtonStyle(
+                      backgroundColor: MaterialStateProperty.all(Colors.blue),
+                      padding: MaterialStateProperty.all(EdgeInsets.all(20)),
+                      textStyle: MaterialStateProperty.all(TextStyle(fontSize: 20))),
+                  onPressed: () {
+                    print('OK');
+                  },
+                ),
               ],
             ),
             Text('3. RawMaterialButton', style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),),
@@ -77,16 +87,16 @@ class _ButtonPageState extends State<ButtonPage> {
             Text('4. ElevatedButton + icon', style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),),
             ElevatedButton.icon(
               label: Text('ElevatedButton icon'),
-              icon: Icon(Icons.search),
+              icon: Icon(Icons.access_alarm_outlined),
               onPressed: () {
                 print('ElevatedButton icon');
               },
             ),
             Text('5. ElevatedBConstrainedBox', style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),),
             ConstrainedBox(
-              constraints: BoxConstraints.tightFor(width: 200, height: 100),
+              constraints: BoxConstraints.tightFor(width: 300, height: 200),
               child: ElevatedButton(
-                child: Text('200 x 100'),
+                child: Text('300 x 200'),
                 onPressed: () {
                   print('ConstrainedBox');
                 },
@@ -96,7 +106,7 @@ class _ButtonPageState extends State<ButtonPage> {
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
       floatingActionButton: FloatingActionButton(
-        child: Icon(Icons.add_a_photo),
+        child: Icon(Icons.account_balance),
         backgroundColor: Colors.blue,
         onPressed: () {
           print('FloatingActionButton');

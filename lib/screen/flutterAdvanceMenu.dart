@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
-import 'package:flutter_101/screen/flutterBasic/futurePage.dart';
+import 'package:flutter_101/screen/flutterAdvance/barCodePage.dart';
+import 'package:flutter_101/screen/flutterAdvance/futurePage.dart';
+import 'package:flutter_101/screen/flutterAdvance/qrCodePage.dart';
 import 'package:flutter_101/screen/flutterBasic/listViewMenu.dart';
-import 'package:flutter_101/screen/flutterBasic/defaultPage.dart';
-import 'package:flutter_101/screen/flutterBasic/scaffoldPage.dart';
 
 class FlutterAdvanceMenu extends StatefulWidget {
 
@@ -20,6 +20,9 @@ class _FlutterAdvanceMenuState extends State<FlutterAdvanceMenu> {
 
     '1. Listview Widget',
     '2. Future',
+    '3. Generate QRCode',
+    '4. Generate Barcode',
+    // 'new line',
 
   ];
 
@@ -40,7 +43,7 @@ class _FlutterAdvanceMenuState extends State<FlutterAdvanceMenu> {
                       padding: new EdgeInsets.all(10.0),
                       child: Text(widgetMenu[index],
                       style: new TextStyle(fontSize: 25.0,fontWeight: FontWeight.bold,color: Colors.yellow),),
-                    )
+                    ),
                   ),
                   onTap: () => _onTileClicked(index),
                 );
@@ -55,7 +58,7 @@ class _FlutterAdvanceMenuState extends State<FlutterAdvanceMenu> {
     print("You tapped on item $index");
       if (index == 0) {
         Navigator.push(context, MaterialPageRoute(
-            builder: (context) => ListViewMenu(title: widgetMenu[index])
+            builder: (context) => ListViewMenu(title: widgetMenu[index]) //เรียกไปยังคลาสหรือหน้าแอพอื่นๆ
         ),
         );
       }else if (index == 1) {
@@ -65,15 +68,21 @@ class _FlutterAdvanceMenuState extends State<FlutterAdvanceMenu> {
         );
       }else if (index == 2) {
         Navigator.push(context, MaterialPageRoute(
-            builder: (context) => ScaffoldPage(title: widgetMenu[index])
+            builder: (context) => QRCodePage(title: widgetMenu[index])
         ),
         );
-      }else{
+      }else if (index == 3) {
         Navigator.push(context, MaterialPageRoute(
-            builder: (context) => DefaultPage(title: widgetMenu[index],)
+            builder: (context) => BarcodePage(title: widgetMenu[index])
         ),
         );
       }
+      // else{
+      //   Navigator.push(context, MaterialPageRoute(
+      //       builder: (context) => DefaultPage(title: widgetMenu[index],)
+      //   ),
+      //   );
+      // }
     }
 
 

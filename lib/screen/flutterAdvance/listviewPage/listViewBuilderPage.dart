@@ -1,4 +1,7 @@
+import 'dart:convert';
+
 import 'package:flutter/material.dart';
+import 'package:flutter_101/api/CatService.dart';
 
 class ListViewBuilderPage extends StatefulWidget {
 
@@ -16,7 +19,8 @@ class _ListViewBuilderPageState extends State<ListViewBuilderPage> {
 
   @override
   Widget build(BuildContext context) {
-    final items = List<String>.generate(150, (i) => "Item $i");
+    final items = List<String>.generate(40, (i) => "Yru item $i");
+    print('item= ${items.length}');
 
     return Scaffold(
       appBar: AppBar(
@@ -29,14 +33,15 @@ class _ListViewBuilderPageState extends State<ListViewBuilderPage> {
               itemBuilder: (BuildContext context,int index){
                 return ListTile(
                   leading: Icon(Icons.sentiment_neutral),
-                  title:Text("List ${items[index].characters} / index: $index"),
-                  subtitle: Text('subtitle ${items[index].characters}'),
+                  title:Text("> ${items[index].characters} / index: $index"),
+                  subtitle: Text('ผลคูณ $index x 2 =    ${index * 2}'),
                   trailing: Text("GFG",
                     style: TextStyle(
                         color: Colors.green,fontSize: 15),),
 
                   onTap: (){
-                    print('Touch List $index');
+                    print('Touch List >> $index');
+
                   },
                 );
               }
@@ -44,6 +49,7 @@ class _ListViewBuilderPageState extends State<ListViewBuilderPage> {
       ),
     );
   }
+
 
 
 }

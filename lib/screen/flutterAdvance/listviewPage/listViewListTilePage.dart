@@ -27,15 +27,15 @@ class _ListViewPageState extends State<ListViewLisTile> {
               // padding: EdgeInsets.only(left: 10.0, right: 10.0, top: 10.0),
               children: <Widget>[
                 ListTile(
-                  title: Text('List Star'),
-                  leading: Icon(Icons.star),
+                  title: Text('0812345678'),
+                  leading: Icon(Icons.phone),
                   onTap: (){
                     print('Touch List 0');
                   },
                 ),
                 ListTile(
                   title: Text('List Album'),
-                  leading: Icon(Icons.album),
+                  leading: Icon(Icons.settings),
                   onTap: (){
                     print('Touch List 1');
                   },
@@ -50,7 +50,7 @@ class _ListViewPageState extends State<ListViewLisTile> {
                 ListTile(
                   title: Text('List Photo'),
                   subtitle: Text('Sub Photo'),
-                  leading: Icon(Icons.add_a_photo_rounded),
+                  leading: Icon(Icons.add_a_photo_rounded,color: Colors.blue,),
                   trailing: Icon(Icons.add_a_photo_rounded,color: Colors.red,),
                   onTap: (){
                     print('Touch List 3');

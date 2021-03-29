@@ -22,13 +22,13 @@ class _CenterPageState extends State<CenterPage> {
         title: Text(widget.title),
       ),
       body: new Container(
-          color: Colors.black,
+          color: Colors.white,
           padding: new EdgeInsets.all(16.0),
           child: Center(
-            child: Text(
-                '${widget.title}',
-                style: TextStyle(fontSize: 30,color: Colors.yellow)
-            ),
+            // child: Text(
+            //     '${widget.title}',
+            //     style: TextStyle(fontSize: 30,color: Colors.black)
+            // ),
 
             // child: Container(
             //   width: 150.0,
@@ -36,9 +36,10 @@ class _CenterPageState extends State<CenterPage> {
             //   color: Colors.red,
             // ),
 
-            // child: Image.asset('assets/images/logo/splash_yru_logo.png',
-            //   height: 250.0,
-            // ),
+            child: Image.asset('assets/images/logo/splash_yru_logo.png',
+              height: 250.0,
+            ),
+
 
           ),
       ),

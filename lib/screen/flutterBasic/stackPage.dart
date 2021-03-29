@@ -25,10 +25,7 @@ class _StackPageState extends State<StackPage> {
           padding: new EdgeInsets.all(16.0),
           child: Stack(
             children: <Widget>[
-              Text(
-                '1',
-                style: TextStyle(fontSize: 200),
-              ),
+
               Text(
                 '2',
                 style: TextStyle(fontSize: 150, color: Colors.yellow),
@@ -40,6 +37,10 @@ class _StackPageState extends State<StackPage> {
               Text(
                 '4',
                 style: TextStyle(fontSize: 50, color: Colors.red),
+              ),
+              Text(
+                '1',
+                style: TextStyle(fontSize: 200),
               ),
             ],
           ),

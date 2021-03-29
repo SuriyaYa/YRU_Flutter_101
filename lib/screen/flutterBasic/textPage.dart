@@ -35,7 +35,7 @@ class _TextPageState extends State<TextPage> {
                 style: TextStyle(
                     fontSize: 50,
                     color: Colors.green,
-                    fontWeight: FontWeight.w300),
+                    fontWeight: FontWeight.w800),
               ),
               Text(
                 'Text 3',
@@ -43,7 +43,7 @@ class _TextPageState extends State<TextPage> {
                     fontSize: 50,
                     color: Colors.blue,
                     fontWeight: FontWeight.bold,
-                    backgroundColor: Colors.black ),
+                    backgroundColor: Colors.pink ),
               ),
               Text(
                 'Text 4 ข้อความมีความยาวมากๆ ก็จะทำการตัดบรรทัดให้อัตโนมัติ ตามความกว้างหรือขนาดของหน้าจอ',
@@ -69,16 +69,22 @@ class _TextPageState extends State<TextPage> {
                           color: Colors.red,)
                     ),
                     TextSpan(
-                      text: 'message1 ',
+                      text: 'msg1 ',
                       style: TextStyle(
                         fontSize: 22,
                         color: Colors.green,)
                     ),
                     TextSpan(
-                        text: 'message2',
+                        text: ' msg2',
                         style: TextStyle(
                           fontSize: 22,
                           color: Colors.blue,)
+                    ),
+                    TextSpan(
+                        text: ' msg3',
+                        style: TextStyle(
+                          fontSize: 22,
+                          color: Colors.orange,)
                     ),
                   ],
                 ),

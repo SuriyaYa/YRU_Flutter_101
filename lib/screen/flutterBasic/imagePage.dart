@@ -28,7 +28,8 @@ class _ImagePageState extends State<ImagePage> {
             Container(
               padding: EdgeInsets.all(10),
               color: Colors.grey,
-              child: Image.asset('assets/images/logo/splash_yru_logo.png',height: 180.0,) ,
+              // child: Image.asset('assets/images/logo/splash_yru_logo.png',height: 180.0,) ,
+              child: Image.asset('assets/images/yru/android_robot.jpeg',height: 180.0,) ,
             ),
             SizedBox(
               height: 20.0,
