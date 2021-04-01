@@ -1,8 +1,7 @@
 # flutter_101
-# Developer: Suriya (ITA)
-# Organization: มหาวิทยาลัยราชภัฏยะลา Yala Rajabhat University
-
-A new Flutter application.
+## Developer: Suriya (ITA)
+## Organization: มหาวิทยาลัยราชภัฏยะลา Yala Rajabhat University
+YRU Flutter application.
 
 ## Getting Started
 
